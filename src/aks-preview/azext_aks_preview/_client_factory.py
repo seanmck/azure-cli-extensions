@@ -42,6 +42,8 @@ def cf_resources(cli_ctx, subscription_id=None):
     return get_mgmt_service_client(cli_ctx, ResourceType.MGMT_RESOURCE_RESOURCES,
                                    subscription_id=subscription_id).resources
 
+def cf_acr_registries(cli_ctx, *_):
+    return get_acr_service_client(cli_ctx, VERSION_2017_10_GA).registries
 
 def get_auth_management_client(cli_ctx, scope=None, **_):
     import re
